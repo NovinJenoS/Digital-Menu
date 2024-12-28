@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: #e2dede;
+}
+.container{
+    position: relative;
+    max-width: 1350px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(166, 255, 0);
+    margin: 10px auto;
+}
+.logo{
+    background-color: #000;
+    width: 100%;
+    height: 100px;
+    color: rgb(189, 189, 99);
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h3background{
+    display: inline;
+border:2px solid blue;
+border-radius: 10px;
+}
+@keyframes slide{
+    from{
+        transform:translate(0)
+    }
+    to{
+        transform:translate(-100%)
+    }
+}
+.infinite{
+    margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10px 0;
+    background: linear-gradient(to right,#F56040,#EB4A70);
+    display: flex;
+}
+
+.infinite-slide {
+    display: flex;
+    color: #fff;
+    animation: 20s slide infinite linear;
+   }
+   .infinite-slide h3{
+    margin: 10px 40px;
+   }
+
+
+
+
+
+
+
+ .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+ }
+
+ .adjust-option{
+    display: grid;
+    /*justify-content: space-between;*/
+ }
+ .option{
+    background-color: #fff;
+    padding: 1px ;
+    font-size: 15px;
+ }
+ .option:hover{
+    background-color: blue;
+    color: #fff;
+ }
+.filter_buttons{
+display: flex;
+align-items: center;
+gap:10px;
+flex-wrap: wrap;
+}
+.filter_buttons button:hover{
+    border: 2px solid red;
+}
+.label{
+    margin: 10px;
+    font-size: 18px;
+}
+button{
+   padding:10px 20px;
+   font-size: 18px;
+   background: #fff;
+   border: none;
+   border-radius: 6px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+   cursor: pointer;
+}
+button.active{
+    background: blue;
+    color: #fff;
+}
+.filterable-cards{
+margin-top: 25px;
+display: grid;
+gap: 20px;
+grid-template-columns: repeat(4,1fr);
+/*
+display: flex;
+gap: 20px;
+flex-wrap: wrap;*/
+}
+/*flex grow adjust this according to  the screen shrinking*/
+.card{
+/*flex-grow: 1;
+flex-basis: 300px;*/
+background-color: #fff;
+padding: 3px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.hide{
+    display: none;
+}
+.offers{
+    padding: 10px;
+}
+.offers h3{
+    border-radius: 10px;
+ display: inline-block;
+ color: #fff;
+ padding: 10px;
+ background: linear-gradient(to right,#F56040,#EB4A70);
+}
+
+.offers-bg{
+    background: #d4d2d2;
+}
+
+.filterable-scroll{
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.filterable-scroll::-webkit-scrollbar{
+    display: none;
+}
+.scroll{
+    background-color: #fff;
+    margin: 0px 10px 10px;
+    padding: 3px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.scroll img{
+    width: 100%;
+   height:210px;
+    object-fit:cover;
+    border-radius: 8px 8px 0 0;
+}
+.card img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+.card-body{
+    padding: 15px 20px 20px;
+}
+.addcart{
+    margin-left: 50%;
+transform: translate(-50%);
+font-size: 16px;
+border-radius: 5px;
+pointer:cursor;
+border: 2px solid yellowgreen;
+padding: 10px 10px;
+}
+.addcart:hover{
+    background: blue;
+    color: #fff;
+}
+.card-title{
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+.card-text{
+    font-size: 18px;
+    color: #333;
+}
+
+
+@media (max-width:600px){
+    .container{
+      background-color: #000;
+    } 
+    .filterable-cards{
+        box-sizing: border-box;
+        margin-top: 25px;
+       display: grid;
+        gap: 10px;
+    grid-template-columns: repeat(2, 1fr) ;}
+}
+@media (min-width:600px) and (max-width:800px){
+    .container{
+      background-color:pink;
+    } 
+    .filterable-cards{
+        box-sizing: border-box;
+        margin-top: 25px;
+       display: grid;
+        gap: 10px;
+    grid-template-columns: repeat(3, 1fr) ;}
+}
